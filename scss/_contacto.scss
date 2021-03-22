@@ -1,0 +1,45 @@
+.contacto{
+    margin: 2em;
+
+    .titPrincipal{
+        margin-top: 1em;
+        font-family: $barlow, sans-serif;
+        color: $amarilloclaro;
+        font-weight: lighter;
+        text-align: center;
+        background-color: $celeste03;
+        border-radius: 10px;
+        font-size: calc(10em+10em);
+    }
+
+    .cuadroContacto{
+
+        .formulario{
+            margin: auto;
+            border-radius: 10px;
+            background-color: $verdeazulado08;
+            font-family: $barlow, sans-serif;
+            color: $amarilloclaro;
+            font-weight: lighter;
+            display: inline-block;
+            padding: 1em;
+            align-items: space-around;
+            
+        }
+    }
+
+    .vidC{
+        margin: auto;
+        .video{
+            width: 80%;
+            height: 80%;
+            border-radius: 10px;
+        }
+    }
+}
+@media (max-width: 700px){
+    .vidC{
+        display: none;
+    }
+}
+

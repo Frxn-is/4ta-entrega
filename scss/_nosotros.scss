@@ -1,0 +1,88 @@
+
+.nosotros{
+    background-size: cover;
+    height: 82.5vh;
+
+    .nosotros__titulo{
+        margin-top: 0.5em;
+        font-family: $barlow;
+        color: $amarilloclaro;
+        font-size: calc(2rem+0.65rem);
+        text-align: center;
+        animation-duration: 3s; /* animacion titulo */
+        animation-name: nosotros;
+        animation-delay: 1s;
+    }
+     /*hace que el titulo vaya "apareciendo"*/
+ @keyframes nosotros{
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
+ }
+    
+    .nosotros__desc{
+        display: flex;
+        align-items: center;
+        margin-top: 8vh;
+        p{
+            margin-left: auto;
+            margin-right: 5em;
+            width: 70vw;
+            font-family: $barlow;
+            text-align: center;
+        }
+    }
+
+    .nosotros__img:hover{
+        transform: scale(1.25);
+        transition: 2s;
+    }
+    
+}
+
+@each $p in p1, p2, p3, {
+    .#{$p}{
+        color: $amarilloclaro;
+    }
+    
+}
+@mixin font($xs,$s,$m) {
+    font-size: $xs;
+    font-weight:$s;
+    font-style: $m;
+}
+.p1{
+    @include font(1em, bold,oblique);
+}
+.p2{
+    @include font(1.5em, lighter,normal);
+
+}
+
+/* @media (max-width: 1920px){
+    .img-fluid{
+        width: 100%;
+        height: 100%;
+    }
+} */
+@media (max-width: 700px){
+
+    .nosotros__desc{
+        display: flex;
+        flex-direction: column;
+
+        .p2{
+            display: none;
+        }
+        .p3{
+            display: none;
+        }
+        
+        .nosotros__img{
+            align-self: center;
+            margin: 1em;
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+}

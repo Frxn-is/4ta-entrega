@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  src: url(../font/athena.ttf);
+  font-family: "athena"; }
+
+/*header*/
+.header {
+  background: rgba(40, 60, 69, 0.3); }
+
+.navbar-toggler {
+  border-color: #fc9322; }
+
+.navbar-toggler-icon {
+  color: #fc9322; }
+
+.header__navbar {
+  font-family: "Barlow", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold; }
+
+.header a {
+  color: #283c45; }
+
+.header a:hover {
+  color: #fc9322;
+  transition: 0.4s; }
+
+.dropdown-menu {
+  background-color: rgba(40, 60, 69, 0.3);
+  top: 120%; }
+  .dropdown-menu a {
+    font-weight: bolder; }
+
+a:hover {
+  color: #fc9322; }
+
+body {
+  background-image: url(../img/fond.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.cuerpo {
+  box-sizing: border-box;
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  /* acomoda txt e img en una fila */
+  justify-content: space-around;
+  align-content: center;
+  align-items: center; }
+
+.cuerpo__texto {
+  height: 50%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center; }
+
+.cuerpo__texto--titulos {
+  margin-top: 1%;
+  text-align: center; }
+  .cuerpo__texto--titulos .titPrin {
+    margin-top: 5%;
+    font-family: "Athena";
+    color: #f9eba7; }
+  .cuerpo__texto--titulos .titSec {
+    font-family: "Barlow", sans-serif;
+    text-transform: uppercase;
+    color: #f9eba7;
+    font-weight: lighter; }
+
+.cuerpo__texto--frase {
+  margin: 5%;
+  width: 75%;
+  text-align: center; }
+  .cuerpo__texto--frase .p1 {
+    align-items: center;
+    color: #f9eba7;
+    font-family: "Barlow", sans-serif;
+    font-weight: medium;
+    font-size: calc(0.825rem + 0.5vw); }
+
+.cuerpo__img {
+  margin: auto; }
+
+.footer {
+  /* margin-top: 5%; */
+  background: rgba(40, 60, 69, 0.3);
+  position: absolute;
+  width: 100%; }
+  .footer .row {
+    --bs-gutter-x: 0; }
+  .footer .redes {
+    margin: auto;
+    /* background: tomato; */ }
+    .footer .redes li {
+      margin: auto;
+      list-style: none; }
+  .footer .newsletter {
+    padding: auto;
+    /* background: violet; */
+    color: #f9eba7;
+    font-family: "Barlow", sans-serif;
+    font-weight: lighter;
+    text-align: start; }
+    .footer .newsletter p {
+      margin: auto;
+      font-size: calc(0.925rem + 0.125vw); }
+    .footer .newsletter #email {
+      margin: 0;
+      padding: 0;
+      width: 75%;
+      height: 50%; }
+  .footer .adv {
+    /* background: yellow; */
+    align-items: center;
+    color: #f9eba7;
+    font-family: "Barlow", sans-serif;
+    font-weight: medium;
+    font-size: calc(0.725rem + 0.125vw); }
+    .footer .adv p {
+      margin: auto;
+      width: 80%;
+      /* box-sizing: content-box; */ }
+
+@media (max-width: 600px) {
+  .newsletter p {
+    font-size: 8px; } }
+
+.nosotros {
+  background-size: cover;
+  height: 82.5vh;
+  /*hace que el titulo vaya "apareciendo"*/ }
+  .nosotros .nosotros__titulo {
+    margin-top: 0.5em;
+    font-family: "Barlow";
+    color: #f9eba7;
+    font-size: calc(2rem+0.65rem);
+    text-align: center;
+    animation-duration: 3s;
+    /* animacion titulo */
+    animation-name: nosotros;
+    animation-delay: 1s; }
+
+@keyframes nosotros {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+  .nosotros .nosotros__desc {
+    display: flex;
+    align-items: center;
+    margin-top: 8vh; }
+    .nosotros .nosotros__desc p {
+      margin-left: auto;
+      margin-right: 5em;
+      width: 70vw;
+      font-family: "Barlow";
+      text-align: center; }
+  .nosotros .nosotros__img:hover {
+    transform: scale(1.25);
+    transition: 2s; }
+
+.p1 {
+  color: #f9eba7; }
+
+.p2 {
+  color: #f9eba7; }
+
+.p3 {
+  color: #f9eba7; }
+
+.p1 {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: oblique; }
+
+.p2 {
+  font-size: 1.5em;
+  font-weight: lighter;
+  font-style: normal; }
+
+/* @media (max-width: 1920px){
+    .img-fluid{
+        width: 100%;
+        height: 100%;
+    }
+} */
+@media (max-width: 700px) {
+  .nosotros__desc {
+    display: flex;
+    flex-direction: column; }
+    .nosotros__desc .p2 {
+      display: none; }
+    .nosotros__desc .p3 {
+      display: none; }
+    .nosotros__desc .nosotros__img {
+      align-self: center;
+      margin: 1em;
+      width: 50%;
+      height: 50%; } }
+
+/* inicio pagina Nuestras cervezas
+ */
+/*titulo principal*/
+.tit {
+  width: 90%;
+  margin: 0 auto 0 auto; }
+
+#nuestrasCervezas {
+  margin-top: 1em;
+  padding: 0.1em 0 0.1 0;
+  font-family: "Barlow Condensed";
+  text-align: center;
+  font-size: calc(10em+10em);
+  color: #f9eba7;
+  background-color: rgba(98, 139, 130, 0.1);
+  border-radius: 10px;
+  animation-duration: 3s;
+  /* animacion titulo */
+  animation-name: nuestrasCervezas;
+  animation-delay: 1s; }
+
+/*hace que el titulo vaya "apareciendo"*/
+@keyframes nuestrasCervezas {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+/*tarjates con descripcion de cervezas*/
+.cuadro {
+  margin: 1em 0 2em 0; }
+  .cuadro .card {
+    background-color: rgba(40, 60, 69, 0.3);
+    transition: transform .2s;
+    /*animacion*/ }
+    .cuadro .card .lataImg {
+      width: 50%;
+      height: 50%;
+      margin: auto; }
+    .cuadro .card .tituloLata {
+      font-family: "Barlow", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      color: #f9eba7;
+      font-weight: bold; }
+    .cuadro .card .card-text {
+      font-family: "Barlow", sans-serif;
+      text-align: center;
+      color: #f9eba7;
+      font-weight: lighter; }
+  .cuadro .card:hover {
+    transform: scale(1.1);
+    /*zoom in en las cards*/
+    transition: 0.8s;
+    /*tiempo de la transformacion*/ }
+
+.shop {
+  margin-top: 2em;
+  margin-left: 2em;
+  align-items: center; }
+  .shop .sApa {
+    background-color: rgba(40, 60, 69, 0.3); }
+    .shop .sApa .lataImgA {
+      width: 90%;
+      height: 90%;
+      margin: auto; }
+    .shop .sApa .card-body {
+      margin-left: 0em; }
+      .shop .sApa .card-body .card-title {
+        font-family: "Barlow", sans-serif;
+        text-align: center;
+        color: #f9eba7;
+        font-weight: bold; }
+      .shop .sApa .card-body .card-text {
+        font-family: "Barlow", sans-serif;
+        text-align: center;
+        color: #f9eba7;
+        font-weight: lighter; }
+      .shop .sApa .card-body .compras {
+        margin-top: 3em; }
+  .shop .sIpa {
+    background-color: rgba(40, 60, 69, 0.3); }
+    .shop .sIpa .lataImgI {
+      width: 90%;
+      height: 90%;
+      margin: auto; }
+    .shop .sIpa .card-body {
+      margin-left: 0em; }
+      .shop .sIpa .card-body .card-title {
+        font-family: "Barlow", sans-serif;
+        text-align: center;
+        color: #f9eba7;
+        font-weight: bold; }
+      .shop .sIpa .card-body .card-text {
+        font-family: "Barlow", sans-serif;
+        text-align: center;
+        color: #f9eba7;
+        font-weight: lighter; }
+      .shop .sIpa .card-body .compras {
+        margin-top: 3em; }
+  .shop .sIrish {
+    background-color: rgba(40, 60, 69, 0.3); }
+    .shop .sIrish .lataImgIr {
+      width: 90%;
+      height: 90%;
+      margin: auto; }
+    .shop .sIrish .card-body {
+      margin-left: 0em; }
+      .shop .sIrish .card-body .card-title {
+        font-family: "Barlow", sans-serif;
+        text-align: center;
+        color: #f9eba7;
+        font-weight: bold; }
+      .shop .sIrish .card-body .card-text {
+        font-family: "Barlow", sans-serif;
+        text-align: center;
+        color: #f9eba7;
+        font-weight: lighter; }
+      .shop .sIrish .card-body .compras {
+        margin-top: 3em; }
+  .shop .imgSide {
+    margin-top: 2em; }
+
+@media (max-width: 700px) {
+  .imgSide {
+    display: none; } }
+
+.contacto {
+  margin: 2em; }
+  .contacto .titPrincipal {
+    margin-top: 1em;
+    font-family: "Barlow", sans-serif;
+    color: #f9eba7;
+    font-weight: lighter;
+    text-align: center;
+    background-color: rgba(98, 139, 130, 0.1);
+    border-radius: 10px;
+    font-size: calc(10em+10em); }
+  .contacto .cuadroContacto .formulario {
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(40, 60, 69, 0.8);
+    font-family: "Barlow", sans-serif;
+    color: #f9eba7;
+    font-weight: lighter;
+    display: inline-block;
+    padding: 1em;
+    align-items: space-around; }
+  .contacto .vidC {
+    margin: auto; }
+    .contacto .vidC .video {
+      width: 80%;
+      height: 80%;
+      border-radius: 10px; }
+
+@media (max-width: 700px) {
+  .vidC {
+    display: none; } }
